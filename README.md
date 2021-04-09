@@ -5,7 +5,7 @@
 
 ### Project Description
 
-This project is a web application that DESCRIPTION
+This project is a web application that takes in user peference on pizza toppings and size and returns a price.
 ---
 ### Technologies Used
 1. HTML5+CSS3
@@ -16,10 +16,10 @@ This project is a web application that DESCRIPTION
 
 ---
 ### Installation Instructions
-1. Clone this repo: `git clone https://github.com/Usarneme/REPO URL`
+1. Clone this repo: `git clone https://github.com/thomasfriedrichs/pizza-parlor`
 2. Enter new directory `cd REPO DIR`
 3. Begin a web server in order to interact with and view index.html
-4. Open your browser and navigate to the webserver location (for example: localhost:8080)
+4. Drag and drop index.html into web browser 
 ---
 ### Known Issues:
 1. NO KNOWN ISSUES
@@ -63,4 +63,4 @@ Describe: Pizza Parlor
 
 ---
 ### License is GPLv3 and I make no claim to copyright. 
-<br />
+

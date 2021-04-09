@@ -26,7 +26,6 @@ $(document).ready(function () {
     myPizza = new Pizza(toppings, size)
     myPizza.totalPrice(toppings,size)
     $(".total").append(toString(totalPrice())
-    console.log(myPizza)
     $(".result").show()
   });
 });
