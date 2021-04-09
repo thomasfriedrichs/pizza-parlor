@@ -24,6 +24,8 @@ $(document).ready(function () {
     const toppings = $("#toppings").val()
     const size = $("#size").val()
     myPizza = new Pizza(toppings, size)
+    myPizza.totalPrice(toppings,size)
+    $(".total").append(totalPrice())
     console.log(myPizza)
     $(".result").show()
   });
