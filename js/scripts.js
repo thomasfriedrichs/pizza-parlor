@@ -19,5 +19,13 @@ Pizza.prototype.totalPrice = function() {
 const myPizza = new Pizza(["olives"], "small")
 myPizza.totalPrice(); 
 
+//UI Logic
 
+$(document).ready(function () {
+  $("form").submit(function (event) { 
+    event.preventDefault();
+    
+    
+  });
+});
 
