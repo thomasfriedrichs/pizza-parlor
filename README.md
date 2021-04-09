@@ -41,9 +41,10 @@ Describe: Pizza Parlor
           myPizza.toppings;
   * Expected Output: olives cheese 
 
-  * Test:
-  * Code:
-  * Expected Output:
+  * Test: Pizza has size property
+  * Code: const myPizza = new Pizza(["olives, cheese"], "small")
+          myPizza.size;
+  * Expected Output: small 
 
   * Test:
   * Code:
