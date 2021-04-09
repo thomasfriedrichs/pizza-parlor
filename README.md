@@ -32,7 +32,8 @@ This project is a web application that DESCRIPTION
 Describe: Pizza Parlor
 
   * Test: Pizza has Toppings property 
-  * Code: const myPizza = New Pizza(toppings[1])
+  * Code: const myPizza = new Pizza("olives")
+  myPizza.toppings;
   * Expected Output: olives
 
   * Test:

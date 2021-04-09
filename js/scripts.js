@@ -1,5 +1,6 @@
-function Pizza(topping1) {
-  this.topping1 = olives
+function Pizza(toppings) {
+  this.toppings = toppings
 }
 
-console.log(Pizza(topping1))
+const myPizza = new Pizza("olives")
+myPizza.toppings;
