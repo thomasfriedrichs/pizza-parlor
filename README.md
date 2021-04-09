@@ -33,12 +33,13 @@ Describe: Pizza Parlor
 
   * Test: Pizza has Toppings property 
   * Code: const myPizza = new Pizza("olives")
-  myPizza.toppings;
+          myPizza.toppings;
   * Expected Output: olives
 
-  * Test:
-  * Code:
-  * Expected Output:
+  * Test: Pizza can take in multiple toppings
+  * Code: const myPizza = new Pizza(["olives, cheese"])
+          myPizza.toppings;
+  * Expected Output: olives cheese 
 
   * Test:
   * Code:
