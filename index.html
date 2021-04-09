@@ -19,30 +19,26 @@
         <form id="form">
           <div>
             <h3>Toppings</h3>
-            <form id="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="1">
-              <label for="cheese">Cheese</label><br>
-              <input type="checkbox" id="olives" name="olives" value="1">
-              <label for="olives">Olives</label><br>
-              <input type="checkbox" id="pepperoni" name="pepperoni" value="1">
-              <label for="pepperoni">Pepperoni</label>
-            </form>
+            <input type="checkbox" id="toppings" name="cheese" value="cheese">
+            <label for="cheese">Cheese</label><br>
+            <input type="checkbox" id="toppings" name="olives" value="olives">
+            <label for="olives">Olives</label><br>
+            <input type="checkbox" id="toppings" name="pepperoni" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
           </div>
           <div>
             <h3>Select Size</h3>
-            <form id="size">
-              <input type="radio" id="small" name="small" value="small">
-              <label for="small">Small</label><br>
-              <input type="radio" id="medium" name="medium" value="medium">
-              <label for="medium">Medium</label><br>
-              <input type="radio" id="large" name="large" value="large">
-              <label for="large">Large</label>
-            </form>
+            <input type="radio" id="size" name="small" value="small">
+            <label for="small">Small</label><br>
+            <input type="radio" id="size" name="medium" value="medium">
+            <label for="medium">Medium</label><br>
+            <input type="radio" id="size" name="large" value="large">
+            <label for="large">Large</label>
           </div>
           <button type="button" class="btn btn-success">Success</button>
         </form>
         <div>
-          <p class="result"></p>
+          <p class="result">The total is <span class="total"></span></p>
         </div>
       </div>
     </div>

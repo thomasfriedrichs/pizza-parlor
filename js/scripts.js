@@ -13,12 +13,13 @@ Pizza.prototype.totalPrice = function() {
   if (this.size === "small") this.price += 5
   else if (this.size === "medium") this.price += 10
   else if (this.size === "large") this.price += 15
+  return this.price 
 }
 
 //UI Logic
 
 $(document).ready(function () {
-  $("form").submit(function (event) { 
+  $("form#form").submit(function (event) { 
     event.preventDefault();
     const toppings = $("#toppings").val()
     const size = $("#size").val()
