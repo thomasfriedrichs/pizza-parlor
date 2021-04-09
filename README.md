@@ -46,9 +46,10 @@ Describe: Pizza Parlor
           myPizza.size;
   * Expected Output: small 
 
-  * Test:
-  * Code:
-  * Expected Output:
+  * Test: Each topping adds 3 dollars to price 
+  * Code: const myPizza = new Pizza(["olives, cheese, pepperoni"], "small")
+          myPizza;
+  * Expected Output: 9
 
   * Test:
   * Code:
