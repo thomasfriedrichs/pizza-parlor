@@ -15,17 +15,16 @@ Pizza.prototype.totalPrice = function() {
   else if (this.size === "large") this.price += 15
 }
 
-
-const myPizza = new Pizza(["olives"], "small")
-myPizza.totalPrice(); 
-
 //UI Logic
 
 $(document).ready(function () {
   $("form").submit(function (event) { 
     event.preventDefault();
-    
-    
+    const toppings = $("#toppings").val()
+    const size = $("#size").val()
+    myPizza = new Pizza(toppings, size)
+    console.log(myPizza)
+    $(".result").show()
   });
 });
 
