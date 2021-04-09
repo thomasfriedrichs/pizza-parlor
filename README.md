@@ -52,9 +52,11 @@ Describe: Pizza Parlor
           myPizza
   * Expected Output: 3
 
-  * Test: 
-  * Code:
-  * Expected Output:
+  * Test: It will add price based on size 
+  * Code: const myPizza = new Pizza(["olives"], "small")
+          myPizza.totalPrice();
+          myPizza
+  * Expected Output: 8
 
 
 ```
