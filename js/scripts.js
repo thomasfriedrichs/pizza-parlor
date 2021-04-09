@@ -7,13 +7,13 @@ function Pizza(toppings, size) {
 }
 
 Pizza.prototype.totalPrice = function() {
-  this.toppings.forEach(topping) { 
+  if (this.toppings[i] === 1) {
     this.price += 3
   }
 }
 
 
-const myPizza = new Pizza(["olives", "cheese", "pepperoni"], "small")
+const myPizza = new Pizza(["olives"], "small")
           myPizza.totalPrice();
 
 
