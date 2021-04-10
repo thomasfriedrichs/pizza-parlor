@@ -18,14 +18,15 @@ Pizza.prototype.totalPrice = function() {
 
 //UI Logic
 
-$(document).ready(function () {
-  $("form#form").submit(function (event) { 
+$(document).ready(function() {
+  $("form").submit(function(event) { 
     event.preventDefault();
+    console.log("hi")
     const toppings = $("#toppings").val()
     const size = $("#size").val()
     myPizza = new Pizza(toppings, size)
     myPizza.totalPrice(toppings,size)
-    $(".total").append(toString(totalPrice())
+    $(".total").text(toString(totalPrice()))
     $(".result").show()
   });
 });
