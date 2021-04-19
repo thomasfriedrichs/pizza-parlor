@@ -7,29 +7,37 @@ function Pizza([], size) {
 }
 
 Pizza.prototype.totalPrice = function() {
-  //this.toppings.forEach(index) 
-    //this.price += 3
-  if (this.toppings.length === 1) this.price += 3
-  else if (this.toppings.length === 2) this.price += 6 
-  else if (this.toppings.length === 3) this.price += 9 
-  if (this.size === "small") this.price += 5
-  else if (this.size === "medium") this.price += 10
-  else if (this.size === "large") this.price += 15
+  if (this.toppings.length === 1) {
+    this.price += 3;
+  } else if (this.toppings.length === 2) { 
+    this.price += 6;
+  } else if (this.toppings.length === 3) { 
+    this.price += 9;
+  }
+  if (this.size === "small") { 
+    this.price += 5;
+  } else if (this.size === "medium") {
+    this.price += 10;
+  } else if (this.size === "large") {
+    this.price += 15;
+  }
   return this.price 
-}
+};
 
 //UI Logic
 
 $(document).ready(function() {
   $("form").submit(function(event) { 
     event.preventDefault();
-    const toppings = $(".toppings").val()
-    const size = $(".size").val()
-    myPizza = new Pizza(toppings, size)
-    const price = myPizza.totalPrice(toppings,size)
+    const toppings = [$("input:checkbox[name=toppings]:checked").val()];
+    console.log(toppings)
+    const size = $("input:radio[name=size]:checked").val();
+    console.log(size)
+    myPizza = new Pizza(toppings, size);
+    const price = myPizza.totalPrice();
     console.log(price)
-    $(".total").text(toString(totalPrice()))
-    $(".result").show()
+    $(".total").text(toString(price));
+    $(".result").show();
   });
 });
 
