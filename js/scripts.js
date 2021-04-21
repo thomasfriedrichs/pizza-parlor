@@ -1,7 +1,7 @@
 //Business Logic
 
-function Pizza([], size) {
-  this.toppings = []
+function Pizza(toppings, size) {
+  this.toppings = toppings
   this.size = size 
   this.price = 0 
 }
@@ -11,14 +11,17 @@ Pizza.prototype.totalPrice = function() {
     this.price += 3;
   } else if (this.toppings.length === 2) { 
     this.price += 6;
-  } else if (this.toppings.length === 3) { 
+  } else if (this.toppings.length === 3) {
     this.price += 9;
+  } else {
+    this.price += 0;
   }
+
   if (this.size === "small") { 
     this.price += 5;
   } else if (this.size === "medium") {
     this.price += 10;
-  } else if (this.size === "large") {
+  } else { 
     this.price += 15;
   }
   return this.price 
@@ -29,14 +32,16 @@ Pizza.prototype.totalPrice = function() {
 $(document).ready(function() {
   $("form").submit(function(event) { 
     event.preventDefault();
-    const toppings = [$("input:checkbox[name=toppings]:checked").val()];
-    console.log(toppings)
+    let toppings = []
+    $("input:checkbox[name=toppings]:checked").each(() => {
+      let topping = $(this).val();
+      toppings.push(topping);
+    })
     const size = $("input:radio[name=size]:checked").val();
-    console.log(size)
     myPizza = new Pizza(toppings, size);
+    console.log(myPizza)
     const price = myPizza.totalPrice();
-    console.log(price)
-    $(".total").text(toString(price));
+    $(".total").text(price.toString());
     $(".result").show();
   });
 });
